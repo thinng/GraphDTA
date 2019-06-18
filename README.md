@@ -9,6 +9,7 @@
 + utils.py: include TestbedDataset used by create_data.py to create data, and performance measures.
 + predict_with_pretrained_model.py: run this to predict affinity for testing data using models already trained stored at folder pretrained/
 + training.py: train a GraphDTA model.
++ models/ginconv.py, gat.py, gat_gcn.py, and gcn.py: proposed models GINConvNet, GATNet, GAT_GCN, and GCNNet receiving graphs as input for drugs.
 
 # Step-by-step running:
 
