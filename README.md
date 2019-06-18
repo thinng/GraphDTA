@@ -52,3 +52,20 @@ if len(sys.argv)>3:
 
 This returns the model and result files for the modeling achieving the best mse for testing data throughtout the training.
 For example, it returns two files model_GATNet_davis.model and result_GATNet_davis.csv when running GATNet on Davis data.
+
+## 4. Train a prediction model with validation 
+
+In "3. Train a prediction model", a model is trained on training data and chosen when it gains the best MSE for testing data.
+This follows how a model was chosen in https://github.com/hkmztrk/DeepDTA. 
+
+In this section, a model is trained on 80% of trainining data and chosen if it gains the best MSE for validation data, 
+which is 20% of training data. The the model is used to predict affinity for testing data.
+
+Same arguments as in "3. Train a prediction model" are used. E.g., running 
+
+```sh
+python training_validation.py 0 0 0
+```
+
+This returns the model achieving the best mse for validation data throughtout the training and performance results of the model on testing data.
+For example, it returns two files model_GATNet_davis.model and result_GATNet_davis.csv when running GATNet on Davis data.
