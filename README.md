@@ -10,7 +10,7 @@
 
 # Step-by-step running:
 
-## 0. Installing Python libaries needed
+## 0. Install Python libaries needed
 + Install pytorch_geometric following instruction at https://github.com/rusty1s/pytorch_geometric
 + Install rdkit: conda install -y -c conda-forge rdkit
 
