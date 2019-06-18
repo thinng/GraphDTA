@@ -40,9 +40,9 @@ python training.py 0 0 0
 ```
 
 where 
-+ the first argument is for the index of the datasets, 0/1 for 'davis' or 'kiba', respectively;
-+ the second argument is for the index of the models, 0/1/2/3 for GINConvNet, GATNet, GAT_GCN, or GCNNet, respectively;
-+ and the third argument is for the index of the cuda, 0/1 for 'cuda:0' or 'cuda:1', respectively. 
+++ the first argument is for the index of the datasets, 0/1 for 'davis' or 'kiba', respectively;
+++ the second argument is for the index of the models, 0/1/2/3 for GINConvNet, GATNet, GAT_GCN, or GCNNet, respectively;
+++ and the third argument is for the index of the cuda, 0/1 for 'cuda:0' or 'cuda:1', respectively. 
 + Note that your actual CUDA name may vary from these, so please change the following code accordingly:
 ```sh
 cuda_name = "cuda:0"
