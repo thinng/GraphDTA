@@ -57,7 +57,7 @@ For example, it returns two files model_GATNet_davis.model and result_GATNet_dav
 ## 4. Train a prediction model with validation 
 
 In "3. Train a prediction model", a model is trained on training data and chosen when it gains the best MSE for testing data.
-This follows how a model was chosen in https://github.com/hkmztrk/DeepDTA. 
+This follows how a model was chosen in https://github.com/hkmztrk/DeepDTA. The result by two ways of training is comparable though.
 
 In this section, a model is trained on 80% of training data and chosen if it gains the best MSE for validation data, 
 which is 20% of training data. Then the model is used to predict affinity for testing data.
