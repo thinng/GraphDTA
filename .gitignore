@@ -6,5 +6,4 @@ data/processed/davis_test.pt
 data/processed/davis_train.pt
 data/processed/kiba_test.pt
 data/processed/kiba_train.pt
-training_validation.py
 
