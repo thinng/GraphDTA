@@ -1,0 +1,9 @@
+data/davis_test.csv
+data/davis_train.csv
+data/kiba_test.csv
+data/kiba_train.csv
+data/processed/davis_test.pt
+data/processed/davis_train.pt
+data/processed/kiba_test.pt
+data/processed/kiba_train.pt
+
