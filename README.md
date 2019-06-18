@@ -29,7 +29,7 @@ To predict affinity for testing data using models already trained stored at fold
 ```sh
 python predict_with_pretrained_model.py
 ```
-This returns result.csv, containing the performance of the proposed models on the two datasets. The measures include rmse,mse,pearson,spearman, and ci.
+This returns result.csv, containing the performance of the proposed models on the two datasets. The measures include rmse, mse, pearson, spearman, and ci.
 The models include GINConvNet, GATNet, GAT_GCN, and GCNNet.
 
 ## 3. Train a prediction model
