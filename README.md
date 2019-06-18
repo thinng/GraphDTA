@@ -1,6 +1,8 @@
 # Resources:
 + README.md: this file.
-+ data/davis data/kiba: downloaded from https://github.com/hkmztrk/DeepDTA/tree/master/data
++ data/davis/folds/test_fold_setting1.txt,train_fold_setting1.txt; data/davis/Y,ligands_can.txt,proteins.txt
+  data/kiba/folds/test_fold_setting1.txt,train_fold_setting1.txt; data/kiba/Y,ligands_can.txt,proteins.txt
+  These file were downloaded from https://github.com/hkmztrk/DeepDTA/tree/master/data
 + pretrained: models trained by the proposed framework 
 ###  source codes:
 + create_data.py: create data in pytorch format
