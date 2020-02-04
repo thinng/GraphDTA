@@ -6,7 +6,7 @@
   These file were downloaded from https://github.com/hkmztrk/DeepDTA/tree/master/data
 + pretrained: models trained by the proposed framework 
 
-###  source codes:
+###  Source codes:
 + create_data.py: create data in pytorch format
 + utils.py: include TestbedDataset used by create_data.py to create data, and performance measures.
 + predict_with_pretrained_model.py: run this to predict affinity for testing data using models already trained stored at folder pretrained/
