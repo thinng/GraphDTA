@@ -24,7 +24,7 @@ Running
 ```sh
 python create_data.py
 ```
-This returns kiba_train.csv, kiba_test.csv, davis_train.csv, and davis_test.csv in data/ folder. These files are in turn input to create data in pytorch format,
+This returns kiba_train.csv, kiba_test.csv, davis_train.csv, and davis_test.csv, in data/ folder. These files are in turn input to create data in pytorch format,
 stored at data/processed/, consisting of  kiba_train.pt, kiba_test.pt, davis_train.pt, and davis_test.pt.
 
 ## 2. Predict affinity with pretrained models
