@@ -18,6 +18,16 @@
 ## 0. Install Python libaries needed
 + Install pytorch_geometric following instruction at https://github.com/rusty1s/pytorch_geometric
 + Install rdkit: conda install -y -c conda-forge rdkit
++ Or run the following commands to install both pytorch_geometric and rdkit:
+
+conda create -n geometric python=3
+conda activate geometric
+conda install -y -c conda-forge rdkit
+conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=9.0 -c pytorch
+pip install --verbose --no-cache-dir torch-scatter
+pip install --verbose --no-cache-dir torch-sparse
+pip install --verbose --no-cache-dir torch-cluster
+pip install torch-geometric
 
 ## 1. Create data in pytorch format
 Running
