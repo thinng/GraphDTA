@@ -70,16 +70,3 @@ class GCNNet(torch.nn.Module):
         xc = self.dropout(xc)
         out = self.out(xc)
         return out
-
-        x = self.relu(self.fc_g1(x))
-        x = self.dropout(x)
-        x = self.fc_g2(x)
-        x = self.fc1(x)
-        x = self.dropout(x)
-        x = self.fc2(x)
-        x = self.relu(x)
-        x = self.dropout(x)
-        x = self.relu(self.out(x))
-        return F.log_softmax(x, dim=-1)
-
-
