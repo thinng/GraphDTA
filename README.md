@@ -33,6 +33,7 @@ pip install torch-geometric
 ## 1. Create data in pytorch format
 Running
 ```sh
+conda activate geometric
 python create_data.py
 ```
 This returns kiba_train.csv, kiba_test.csv, davis_train.csv, and davis_test.csv, saved in data/ folder. These files are in turn input to create data in pytorch format,
@@ -41,6 +42,7 @@ stored at data/processed/, consisting of  kiba_train.pt, kiba_test.pt, davis_tra
 ## 2. Predict affinity with pretrained models
 To predict affinity for testing data using models already trained stored at folder pretrained/. Running 
 ```sh
+conda activate geometric
 python predict_with_pretrained_model.py
 ```
 This returns result.csv, containing the performance of the proposed models on the two datasets. The measures include rmse, mse, pearson, spearman, and ci.
@@ -51,6 +53,7 @@ To train a model using training data. The model is chosen if it gains the best M
 Running 
 
 ```sh
+conda activate geometric
 python training.py 0 0 0
 ```
 
