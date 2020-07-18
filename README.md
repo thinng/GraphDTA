@@ -49,7 +49,7 @@ This returns result.csv, containing the performance of the proposed models on th
 The models include GINConvNet, GATNet, GAT_GCN, and GCNNet.
 
 ## 3. Train a prediction model
-To train a model using training data. The model is chosen if it gains the best MSE for testing data. This follows how a model was chosen in https://github.com/hkmztrk/DeepDTA. 
+To train a model using training data. The model is chosen if it gains the best MSE for testing data.  
 Running 
 
 ```sh
