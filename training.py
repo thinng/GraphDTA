@@ -48,7 +48,7 @@ model_st = modeling.__name__
 
 cuda_name = "cuda:0"
 if len(sys.argv)>3:
-    cuda_name = ["cuda:0","cuda:1"][int(sys.argv[3])]
+    cuda_name = "cuda:" + str(int(sys.argv[3])) 
 print('cuda_name:', cuda_name)
 
 TRAIN_BATCH_SIZE = 512
