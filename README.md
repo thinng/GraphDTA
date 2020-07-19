@@ -23,11 +23,13 @@
 conda create -n geometric python=3
 conda activate geometric
 conda install -y -c conda-forge rdkit
-conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=9.0 -c pytorch
-pip install --verbose --no-cache-dir torch-scatter
-pip install --verbose --no-cache-dir torch-sparse
-pip install --verbose --no-cache-dir torch-cluster
+conda install pytorch torchvision cudatoolkit -c pytorch
+pip install torch-scatter==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
+pip install torch-sparse==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
+pip install torch-cluster==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
+pip install torch-spline-conv==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
 pip install torch-geometric
+
 ```
 
 ## 1. Create data in pytorch format
