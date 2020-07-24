@@ -66,7 +66,7 @@ where the first argument is for the index of the datasets, 0/1 for 'davis' or 'k
 ```sh
 cuda_name = "cuda:0"
 if len(sys.argv)>3:
-    cuda_name = ["cuda:0","cuda:1"][int(sys.argv[3])]
+    cuda_name = "cuda:" + str(int(sys.argv[3])) 
 ```
 
 This returns the model and result files for the modelling achieving the best MSE for testing data throughout the training.
