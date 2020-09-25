@@ -15,7 +15,7 @@
 
 # Step-by-step running:
 
-## 0. Install Python libraies needed
+## 0. Install Python libraries needed
 + Install pytorch_geometric following instruction at https://github.com/rusty1s/pytorch_geometric
 + Install rdkit: conda install -y -c conda-forge rdkit
 + Or run the following commands to install both pytorch_geometric and rdkit:
