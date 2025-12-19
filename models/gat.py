@@ -18,8 +18,10 @@ class GATNet(torch.nn.Module):
 
         # 1D convolution on protein sequence
         self.embedding_xt = nn.Embedding(num_features_xt + 1, embed_dim)
-        self.conv_xt1 = nn.Conv1d(in_channels=1000, out_channels=n_filters, kernel_size=8)
-        self.fc_xt1 = nn.Linear(32*121, output_dim)
+        self.conv_xt_1 = nn.Conv1d(in_channels=embed_dim, out_channels=n_filters, kernel_size=8)
+        self.conv_xt_2 = nn.Conv1d(in_channels=n_filters, out_channels=2*n_filters, kernel_size=8)
+        self.conv_xt_3 = nn.Conv1d(in_channels=2*n_filters, out_channels=3*n_filters, kernel_size=8)
+        self.fc1_xt = nn.Linear(3*n_filters, output_dim)
 
         # combined layers
         self.fc1 = nn.Linear(256, 1024)
@@ -46,12 +48,16 @@ class GATNet(torch.nn.Module):
         # protein input feed-forward:
         target = data.target
         embedded_xt = self.embedding_xt(target)
-        conv_xt = self.conv_xt1(embedded_xt)
-        conv_xt = self.relu(conv_xt)
+        embedded_xt = torch.permute(embedded_xt, (0, 2, 1))
 
-        # flatten
-        xt = conv_xt.view(-1, 32 * 121)
-        xt = self.fc_xt1(xt)
+        conv_xt = self.conv_xt_1(embedded_xt)
+        conv_xt = self.relu(conv_xt)
+        conv_xt = self.conv_xt_2(conv_xt)
+        conv_xt = self.relu(conv_xt)
+        conv_xt = self.conv_xt_3(conv_xt)
+        conv_xt = self.relu(conv_xt)
+        xt = torch.max(conv_xt, dim = -1)[0]
+        xt = self.fc1_xt(xt)
 
         # concat
         xc = torch.cat((x, xt), 1)
